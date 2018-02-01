@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>IRCTC-Booking Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" class="favicon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/gif" sizes="16x16" >    
+    <link href="{{ url_for('static', filename='layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+
+      <div id="logo" class="fl_left">
+        <h1><img src="{{ url_for('static', filename='images/logo.png') }}" style="height: 56px; width: 56px; font-family: sans-serif;" /><a href="/"> IRCTC</a></h1>
+        <p style="margin-left: 68px; margin-top: -10px;">Indian Railways</p>
+      </div>
+
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+
+    </header>
+  </div>
+
+<style>
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+</style>
+
+<body class="wrapper bgded overlay" style="background-image: url('{{ url_for('static', filename='images/back1.jpg') }}'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+    <h1 class="center" style="margin: 50px;"><font color="white">Available Seats</font></h1>
+    <div class="col-md-11" style="margin-left:50px;">
+        <table>
+                <tr>
+                    <th>Train-Id</th>
+                    <th>AC-1</th>
+                    <th>AC-2</th>
+                    <th>AC-3</th>
+                    <th>Sleeper</th>
+                </tr>
+             
+                <tr>
+                    <td>{{ data['train'] }}</td>
+                    <td>{{ data['ac1'] }}</td>
+                    <td>{{ data['ac2'] }}</td>
+                    <td>{{ data['ac3'] }}</td>
+                    <td>{{ data['sleeper'] }}</td>
+                </tr>
+                
+        </table>
+            
+    </div>
+
+    <h1 class="center" style="margin: 50px;"><font color="white">Travel Fare</font></h1>
+        <div class="col-md-11" style="margin-left:50px;">
+            <table>
+                    <tr>
+                        <th>Train-Id</th>
+                        <th>AC-1</th>
+                        <th>AC-2</th>
+                        <th>AC-3</th>
+                        <th>Sleeper</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>{{ data2['train'] }}</td>
+                        <td>${{ data2['ac1'] }}</td>
+                        <td>${{ data2['ac2'] }}</td>
+                        <td>${{ data2['ac3'] }}</td>
+                        <td>${{ data2['sleeper'] }}</td>
+                    </tr>
+            </table>
+        </div>
+
+    <div class="col-md-12" style="margin:30px;">
+            <form action="/details" method="post"> 
+                <div class="form-group col-md-4" style="margin-top: 50px;  margin-left: 400px;">
+                        <label style="font-size:30px;"><font color="white">Class-Id :</font></label>
+                        <input type="text"required class="form-control required" placeholder="Enter The Class-Id You Want To Book*" id="class_id" name= "class_id" value= "{{ request.form.class_id }}" >
+                </div>
+                <div class="form-group col-md-4" style="margin-top: 50px;  margin-left: 400px;">
+                    <button type="submit" class="btn btn-success col-md-12">Submit</button>
+                </div>
+            </form>
+          </div>
+
+
+<div class="wrapper row4">
+        <footer id="footer" class="hoc clear"> 
+    
+            <div class="one_third first">
+            <h6 class="title center">Quotes By The Great 's</h6>
+            <p>People's backyards are much more interesting than their front gardens, and houses that back on to railways are public benefactors. <p style="margin-left: 150px;">--- By John Betjeman</p></p>
+            <p class="btmspace-15">We will build new roads, and highways, and bridges, and airports, and tunnels, and railways all across our wonderful nation. <p style="margin-left: 150px;">--- Donald Trump</p></p>
+            <ul class="faico clear">
+                <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+            </ul>
+            </div>
+            <div class="one_third">
+            <h6 class="title center">Contact us</h6>
+            <ul class="nospace linklist contact center">
+                <li><i class="fa fa-map-marker"></i>
+                <address>
+                    Federation of Railway Officer's Association Office, 256-A, Rail Bhavan, Raisina Road, New Delhi -110001
+                </address>
+                </li>
+                <li><i class="fa fa-phone"></i> (Rly) 43468</li>
+                <li><i class="fa fa-fax"></i> (Rly) 43468</li>
+                <li><i class="fa fa-envelope-o"></i> secyfroa@gmail.com</li>
+            </ul>
+            </div>
+            <div class="one_third">
+            <h6 class="title center">past & present</h6>
+            <ul class="nospace linklist center">
+                <li>
+                <article>
+                    <h2 class="nospace font-x1"><a href="#">Established On</a></h2>
+                    <time class="font-xs block btmspace-10" >1905</time>
+                    <p class="nospace">In 1901, on the recommendations of Sir Thomas Robertson Committee regarding the administration and working of the railways, an early version of the railway board was constituted, with three members serving on it at first. In 1905, its powers were formalised by Lord Curzon's government.</p>
+                </article>
+                </li>
+            </ul>
+            </div>
+    
+        </footer>
+        </div>
+    
+        <div class="wrapper row5">
+        <div id="copyright" class="hoc clear"> 
+    
+            <p class="center">Copyright &copy; 2017 - All Rights Reserved</p>
+    
+        </div>
+        </div>
+    
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

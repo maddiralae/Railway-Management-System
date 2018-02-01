@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>IRCTC-Booking Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" class="favicon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/gif" sizes="16x16" >    
+    <link href="{{ url_for('static', filename='layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+
+      <div id="logo" class="fl_left">
+        <h1><img src="{{ url_for('static', filename='images/logo.png') }}" style="height: 56px; width: 56px; font-family: sans-serif;" /><a href="/"> IRCTC</a></h1>
+        <p style="margin-left: 68px; margin-top: -10px;">Indian Railways</p>
+      </div>
+
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+
+    </header>
+  </div>
+
+<style>
+
+form {
+    display: inline-block;
+    display: inline;
+}
+
+</style>
+
+<body class="wrapper bgded overlay" style="background-image: url('{{ url_for('static', filename='images/back1.jpg') }}'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+       
+
+
+
+<div style="margin-top:100px; margin-bottom:180px; ">
+    <font color="white">
+        <p class="center" style="font-size: 50px; ">"Excluding Payment GateWay......."<p>
+        <p class="center" style="font-size: 30px; ">Thank You For Visiting Our IRCTC Website</p>
+        <p class="center" style="font-size: 30px; ">Have A Great Tour !!!!</p>
+    </font>
+</div>
+
+<form action="/" method="">                    
+    <div class="form-group center" style="margin-top: 10px; margin-bottom: 50px;">
+        <button type="submit" style="padding: 14px 40px;" class="btn btn-success center col-md-6">Back To Home Page</button>
+    </div>
+</form>
+
+
+
+
+    <div class="wrapper row4">
+      <footer id="footer" class="hoc clear"> 
+
+        <div class="one_third first">
+          <h6 class="title center">Quotes By The Great 's</h6>
+          <p>People's backyards are much more interesting than their front gardens, and houses that back on to railways are public benefactors. <p style="margin-left: 150px;">--- By John Betjeman</p></p>
+          <p class="btmspace-15">We will build new roads, and highways, and bridges, and airports, and tunnels, and railways all across our wonderful nation. <p style="margin-left: 150px;">--- Donald Trump</p></p>
+          <ul class="faico clear">
+            <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+          </ul>
+        </div>
+        <div class="one_third">
+          <h6 class="title center">Contact us</h6>
+          <ul class="nospace linklist contact center">
+            <li><i class="fa fa-map-marker"></i>
+              <address>
+                Federation of Railway Officer's Association Office, 256-A, Rail Bhavan, Raisina Road, New Delhi -110001
+              </address>
+            </li>
+            <li><i class="fa fa-phone"></i> (Rly) 43468</li>
+            <li><i class="fa fa-fax"></i> (Rly) 43468</li>
+            <li><i class="fa fa-envelope-o"></i> secyfroa@gmail.com</li>
+          </ul>
+        </div>
+        <div class="one_third">
+          <h6 class="title center">past & present</h6>
+          <ul class="nospace linklist center">
+            <li>
+              <article>
+                <h2 class="nospace font-x1"><a href="#">Established On</a></h2>
+                <time class="font-xs block btmspace-10" >1905</time>
+                <p class="nospace">In 1901, on the recommendations of Sir Thomas Robertson Committee regarding the administration and working of the railways, an early version of the railway board was constituted, with three members serving on it at first. In 1905, its powers were formalised by Lord Curzon's government.</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+      </footer>
+    </div>
+
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear"> 
+
+        <p class="center">Copyright &copy; 2017 - All Rights Reserved</p>
+
+      </div>
+    </div>
+  <div>
+    <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+    <!-- JAVASCRIPTS -->
+    <script src="{{ url_for('static', filename='layout/scripts/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='layout/scripts/jquery.backtotop.js') }}"></script>
+    <script src="{{ url_for('static', filename='layout/scripts/jquery.mobilemenu.js') }}"></script>
+  </div>
+  </body>
+
+</html>
